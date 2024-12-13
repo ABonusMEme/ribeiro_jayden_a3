@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayden Ribeiro</title>
+    <style>
+        /* Font-face declarations */
+        @font-face {
+            font-family: 'FoundersGroteskCondensed';
+            src: url('fonts/TestFoundersGroteskCondensed-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'FoundersGrotesk';
+            src: url('fonts/TestFoundersGrotesk-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'BodyFont';
+            src: url('fonts/BodyFont-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'BodyFont', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5e6; /* eggshell color */
+        }
+
+        header {
+            background-color: #5a7d5a; /* green color */
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'FoundersGroteskCondensed', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #7b9b7b; /* lighter green */
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #5a7d5a; /* darker green */
+        }
+
+        section {
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 1200px;
+            background: #f5f5dc; /* beige color */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5a7d5a; /* green color */
+            background-color: #f5f5dc; /* beige color */
+            margin: -1rem -1rem 1rem -1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-family: 'FoundersGrotesk', Arial, sans-serif;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-family: 'BodyFont', Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .about-me, .my-skills, .contact-me {
+            text-align: center;
+        }
+
+        .about-me img, .my-skills img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .projects h2 {
+            grid-column: span 2; /* Ensures the header spans across the grid */
+        }
+
+        .project-card {
+            background: #f5f5dc; /* beige color */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        table {
+            margin: 1rem auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background: #5a7d5a; /* green color */
+            color: white;
+        }
+
+        a {
+            color: #5a7d5a; /* green color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jayden Ribeiro</h1>
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#my-skills">My Skills</a>
+        <a href="#contact-me">Contact Me</a>
+    </nav>
+</header>
+
+<section id="about-me" class="about-me">
+    <h2>About Me</h2>
+    <img src="profile-image.jpg" alt="Your profile image">
+    <p>This is a brief description about me. I am passionate about design, coding, and creating amazing projects!</p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <p>Description of Project 1</p>
+    </div>
+    <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <p>Description of Project 2</p>
+    </div>
+    <div class="project-card">
+        <img src="project3.jpg" alt="Project 3">
+        <p>Description of Project 3</p>
+    </div>
+    <div class="project-card">
+        <img src="project4.jpg" alt="Project 4">
+        <p>Description of Project 4</p>
+    </div>
+</section>
+
+<section id="my-skills" class="my-skills">
+    <h2>My Skills</h2>
+    <img src="skills-image.jpg" alt="Image representing skills">
+    <p>Below is a table showing my proficiency in various skills:</p>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Beginner</td>
+        </tr>
+    </table>
+</section>
+
+<section id="contact-me" class="contact-me">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:yourname@uwaterloo.ca">yourname@uwaterloo.ca</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
