@@ -5,37 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayden Ribeiro</title>
     <style>
-        /* Font-face declarations */
         @font-face {
             font-family: 'FoundersGroteskCondensed';
-            src: url('fonts/TestFoundersGroteskCondensed-Bold.woff2') format('woff2');
+            src: url('./TestFoundersGroteskCondensed-Bold-BF66175e96add65.otf') format('opentype');
             font-weight: bold;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'FoundersGrotesk';
-            src: url('fonts/TestFoundersGrotesk-Bold.woff2') format('woff2');
+            src: url('./TestFoundersGrotesk-Bold-BF66175e9700615.otf') format('opentype');
             font-weight: bold;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'BodyFont';
-            src: url('fonts/BodyFont-Regular.woff2') format('woff2');
+            src: url('./TestFoundersGrotesk-Regular-BF66175e972ac1c.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
+        }
+
+        html {
+            scroll-behavior: smooth; 
         }
 
         body {
             font-family: 'BodyFont', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f5e6; /* eggshell color */
+            background-color: #f8f5e6; 
         }
 
         header {
-            background-color: #5a7d5a; /* green color */
+            background-color: #5a7d5a;
             color: white;
             text-align: center;
             padding: 1rem 0;
@@ -58,28 +61,28 @@
             text-decoration: none;
             margin: 0 1rem;
             padding: 0.5rem 1rem;
-            background-color: #7b9b7b; /* lighter green */
+            background-color: #7b9b7b;
             border-radius: 4px;
             transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #5a7d5a; /* darker green */
+            background-color: #5a7d5a; 
         }
 
         section {
             margin: 2rem auto;
             padding: 1rem;
             max-width: 1200px;
-            background: #f5f5dc; /* beige color */
+            background: #f5f5dc; 
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             text-align: center;
-            color: #5a7d5a; /* green color */
-            background-color: #f5f5dc; /* beige color */
+            color: #f5f5dc; 
+            background-color: #5a7d5a;
             margin: -1rem -1rem 1rem -1rem;
             padding: 1rem;
             border-radius: 8px;
@@ -90,20 +93,20 @@
         }
 
         p {
+            text-align: center;
             font-family: 'BodyFont', Arial, sans-serif;
             font-size: 1rem;
             line-height: 1.6;
         }
 
-        .about-me, .my-skills, .contact-me {
-            text-align: center;
-        }
-
         .about-me img, .my-skills img {
+            display: block; 
+            margin: 0 auto; 
             max-width: 150px;
-            border-radius: 50%;
+            border-radius: 10px;
             margin-bottom: 1rem;
         }
+
 
         .projects {
             display: grid;
@@ -113,11 +116,21 @@
         }
 
         .projects h2 {
-            grid-column: span 2; /* Ensures the header spans across the grid */
+            grid-column: 1 / -1; 
+            text-align: center;
+            color: #f5f5dc; 
+            background-color: #5a7d5a;
+            margin: -1rem -1rem 1rem -1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-family: 'FoundersGrotesk', Arial, sans-serif;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .project-card {
-            background: #f5f5dc; /* beige color */
+            background: #5a7d5a; 
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 1rem;
@@ -145,21 +158,43 @@
             text-align: center;
         }
 
+        th {
+            background: #5a7d5a;
+            color: #f5f5dc; 
+            font-size: 1.5rem;
+            font-family: 'FoundersGrotesk', Arial, sans-serif;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             margin-top: 2rem;
             padding: 1rem 0;
-            background: #5a7d5a; /* green color */
+            background: #5a7d5a; 
             color: white;
         }
 
         a {
-            color: #5a7d5a; /* green color */
+            color: #5a7d5a; 
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        .contact-me a {
+            display: inline-block;
+            background-color: #5a7d5a;
+            color: #f5f5dc;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .contact-me a:hover {
+            background-color: #7b9b7b; 
         }
     </style>
 </head>
@@ -177,62 +212,76 @@
 
 <section id="about-me" class="about-me">
     <h2>About Me</h2>
-    <img src="profile-image.jpg" alt="Your profile image">
-    <p>This is a brief description about me. I am passionate about design, coding, and creating amazing projects!</p>
+    <img src="./IMG_4244_50.jpeg" alt="Your profile image">
+    <p>Hi, I'm Jayden! I'm a second-year GBDA student at the University of Waterloo with experience in Graphic Design, Product Design, and Marketing. I specialize in developing innovative digital products, offering expertise in UX research, UI design, and prototyping.</p>
 </section>
 
 <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <p>Description of Project 1</p>
+        <img src="Project1.png" alt="Project 1">
+        <p>I Created a full rebrand of the brand Elements, including packaging redesigns, digital and physical mockups, marketing campaigns, and advertisements.</p>
     </div>
     <div class="project-card">
-        <img src="project2.jpg" alt="Project 2">
-        <p>Description of Project 2</p>
+        <img src="Project2.png" alt="Project 2">
+        <p>I created a customer profile for a blockchain healthcare app, with metrics like pains, gains, and motivations.</p>
     </div>
     <div class="project-card">
-        <img src="project3.jpg" alt="Project 3">
-        <p>Description of Project 3</p>
+        <img src="Project3.png" alt="Project 3">
+        <p>I created a new mode for Instagram called InstaCore, which simplifies the app interface to stop doomscrolling.</p>
     </div>
     <div class="project-card">
-        <img src="project4.jpg" alt="Project 4">
-        <p>Description of Project 4</p>
+        <img src="Project4_optimized.png" alt="Project 4">
+        <p>I designed a movie poster for a fictional cyberpunk film called *Night City*, capturing neon ambience.</p>
     </div>
 </section>
 
 <section id="my-skills" class="my-skills">
     <h2>My Skills</h2>
-    <img src="skills-image.jpg" alt="Image representing skills">
-    <p>Below is a table showing my proficiency in various skills:</p>
+    <img src="IMG_7890_50.jpg" alt="Image representing skills">
+    <p>Hi! I’m Jayden Ribeiro, a 19-year-old creative from Toronto, Canada. I thrive at the intersection of design, innovation, and storytelling, combining my skills and passions to create meaningful, user-focused projects. Whether I’m designing, brainstorming solutions, or capturing the world through my camera lens, I’m driven by curiosity and a deep appreciation for impactful ideas. My journey is fueled by a commitment to learning and a love for crafting experiences that resonate with people on a personal level.
+
+The *Elements* rolling papers rebrand is one of the projects I’m most proud of. I was tasked with breathing new life into an iconic product and came up with a new identity that struck a balance between the product’s traditional roots and a contemporary aesthetic. I worked on logo redesigns, cohesive packaging concepts, and I enhanced user appeal while keeping the brand true to its essence. As a deep dive into branding and storytelling, it was a chance to bring together creativity and strategic thinking to create a design that resonates with today’s audiences.  
+
+One of my highlights of work was developing a customer profile for a blockchain health records system. The aim was to reframe healthcare data management around the needs of people living in dense urban areas. I took a humanizing approach to the technology by creating a user narrative that focused on security, accessibility and convenience. This project helped me to strengthen my ability to connect emerging tech with real world applications and also taught me the value of empathy in UX design.    
+
+I want to leave a lasting impact whether it’s through design, photography or crafting innovative solutions. If you’re interested in working together or want to learn more about my work, please don’t hesitate to get in touch; I’m always happy to connect and chat about what we do!</p>
     <table>
         <tr>
             <th>Skill</th>
             <th>Proficiency</th>
         </tr>
         <tr>
-            <td>HTML</td>
+            <td>HTML/CSS</td>
             <td>Advanced</td>
         </tr>
         <tr>
-            <td>CSS</td>
+            <td>Figma</td>
             <td>Intermediate</td>
         </tr>
         <tr>
+            <td>Excel</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>Power Automate</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
             <td>JavaScript</td>
-            <td>Beginner</td>
+            <td>Intermediate</td>
         </tr>
     </table>
 </section>
 
 <section id="contact-me" class="contact-me">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:yourname@uwaterloo.ca">yourname@uwaterloo.ca</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p><a href="mailto:j2ribeiro@uwaterloo.ca">Email</a></p>
+    <p><a href="https://www.linkedin.com/in/jaydenribeiro/" target="_blank">LinkedIn</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>&copy; 2024 Jayden Ribeiro. All rights reserved.</p>
 </footer>
 
 </body>
